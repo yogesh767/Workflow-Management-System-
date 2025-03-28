@@ -5,41 +5,22 @@ import WorkflowTable from "./components/workflowTable/WorkflowTable";
 import WorkflowCreator from "./components/workflowCreater/WorkflowCreator";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 
-const AuthRedirector = () => {
-    const { loggedIn } = useAuth();
-    const navigate = useNavigate();
 
-    useEffect(() => {
-        if (loggedIn) {
-            navigate("/workFlowTable", { replace: true });
-        } else {
-            navigate("/", { replace: true });
-        }
-    }, [loggedIn]);
-
-    return null;
-};
-
-const AppRoutes = () => {
-    const { loggedIn } = useAuth();  // 🔹 Access loggedIn here
-    return (
-        <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/workFlowTable" element={loggedIn ? <WorkflowTable /> : <Navigate to="/" />} />
-            <Route path="/workflowCreator" element={loggedIn ? <WorkflowCreator /> : <Navigate to="/" />} />
-            <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-    );
-};
 
 const App = () => {
+    const { loggedIn } = useAuth()
+    const navigate = useNavigate()
+    useEffect(() => {
+        console.log("loggedIn", loggedIn)
+        if (!loggedIn) navigate("/")
+        else navigate("workFlowTable")
+    }, [loggedIn])
     return (
-        <AuthProvider>
-            <Router>
-                <AuthRedirector />  {/* Handles redirection after refresh */}
-                <AppRoutes />  {/* Separate component for Routes */}
-            </Router>
-        </AuthProvider>
+            <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="/workFlowTable" element={<WorkflowTable />} />
+                <Route path="/workflowCreator" element={<WorkflowCreator />} />
+            </Routes>
     );
 };
 

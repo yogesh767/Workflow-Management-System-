@@ -10,15 +10,6 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [loggedIn, setLoggedIn] = useState(false);
 
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser);
-            setLoggedIn(!!currentUser);
-            setLoading(false);
-        });
-
-        return () => unsubscribe();
-    }, []);
 
     const signup = (email, password) => createUserWithEmailAndPassword(auth, email, password);
     const login = (email, password) => signInWithEmailAndPassword(auth, email, password);
@@ -26,7 +17,7 @@ export const AuthProvider = ({ children }) => {
 
     return (
         <AuthContext.Provider value={{ user, loading, login, signup, logout, setUser, loggedIn, setLoggedIn,setLoading }}>
-            {!loading && children}
+            {children}
         </AuthContext.Provider>
     );
 };
