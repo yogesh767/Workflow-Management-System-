@@ -13,7 +13,7 @@ const Login = () => {
   const navigate =useNavigate()
   const handleSignUp = async () => {
     try {
-      await signUp(user.email, user.password);
+      await signUp(user?.email, user?.password);
       alert("User created successfully!");
     } catch (error) {
       console.error(error.message);
@@ -24,7 +24,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-        await login(user.email, user.password);
+        await login(user?.email, user?.password);
         console.log("Login Successful");
         setLoggedIn(true)
         navigate("/workFlowTable")
