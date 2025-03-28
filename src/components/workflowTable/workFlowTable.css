@@ -1,0 +1,97 @@
+.table-header {
+    border-bottom: 1px solid #EE7425;
+}
+
+.name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4F4F4F;
+
+}
+
+.id {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4F4F4F;
+
+
+}
+
+.lastEdited {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+}
+
+button {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    border-radius: 6px;
+    border-width: 1px;
+    padding-top: 7px;
+    padding-right: 12px;
+    padding-bottom: 7px;
+    padding-left: 12px;
+    color: #221F20;
+    border: 1px solid #E0E0E0;
+    background: none;
+}
+
+h2 {
+    font-weight: 600 !important;
+    font-size: 22px !important;
+    line-height: 100% !important;
+    color: #221F20 !important;
+}
+
+.table-body {
+    border-bottom: 1px solid #F8F2E7 !important;
+}
+
+.searchbar {
+    width: 40%;
+    margin-bottom: 24px;
+
+}
+
+.searchbar input ::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: #BDBDBD !important;
+
+}
+
+.create {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+
+}
+.container{
+    background: #FDFBF6;
+
+}
+.table{
+    background: white;
+    padding: 2rem;
+}
+th, td {
+    padding: 24px; /* Adjust padding as needed */
+    text-align: left;
+  }

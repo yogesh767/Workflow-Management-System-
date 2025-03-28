@@ -1,0 +1,89 @@
+@media (min-width: 767px) {
+    .background {
+        background-image: url('/public/assets/images/background.png') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        height: 100vh !important;
+    }
+}
+
+  input[type="checkbox"]:checked {
+    background-color: #EE3425; /* Red background */
+    border-color: #EE3425;
+    position: relative;
+  }
+  
+  input[type="checkbox"]:checked::after {
+    color: white; /* White tick */
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+
+.w-300 {
+    width: 300px;
+}
+
+.left {
+    font-family: Zen Kaku Gothic Antique;
+}
+
+.left h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.left p {
+    font-size: 12px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.top-5 {
+    margin-top: 60px;
+}
+
+.right h4 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.right h5 {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 44px;
+    letter-spacing: 0px;
+
+}
+
+.form-label {
+    font-size: 12px;
+    vertical-align: middle;
+
+}
+
+.button {
+    color: #616161 !important;
+    border: 1px solid #EEEEEE !important
+}
+
+.signup {
+    font-weight: 700;
+    font-size: 12.8px;
+    color: #212121;
+    letter-spacing: 0px;
+    text-align: center;
+    text-decoration: underline !important;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+
+}
