@@ -59,6 +59,7 @@ const Login = () => {
               <Form.Group className="mb-3">
                 <Form.Label>Email</Form.Label>
                 <Form.Control type="email" placeholder="Type here..." value={user?.email} onChange={(e)=> setUser({...user,email:e.target.value})} />
+                  
               </Form.Group>
 
               <Form.Group className="mb-3">
