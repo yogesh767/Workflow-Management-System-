@@ -58,12 +58,12 @@ const Login = () => {
             <Form>
               <Form.Group className="mb-3">
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="Type here..." value={user.email} onChange={(e)=> setUser({...user,email:e.target.value})} />
+                <Form.Control type="email" placeholder="Type here..." value={user?.email} onChange={(e)=> setUser({...user,email:e.target.value})} />
               </Form.Group>
 
               <Form.Group className="mb-3">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Type here..."  value={user.password} onChange={(e)=> setUser({...user,password:e.target.value})}/>
+                <Form.Control type="password" placeholder="Type here..."  value={user?.password} onChange={(e)=> setUser({...user,password:e.target.value})}/>
               </Form.Group>
 
               <div className="d-flex justify-content-between mb-3">
